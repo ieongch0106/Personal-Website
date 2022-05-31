@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="icon" type="image/x-icon" href="/assets/logo.PNG">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <!-- customized CSS-->
+        <link href="style.css" rel="stylesheet">
+        <!-- script -->
+        <script type='module' src="welcome.js" defer></script>
+        <!-- <script type='module' src="main.js" defer></script> -->
+        <script>
+          function reload() {
+            const keyboardEvent = new KeyboardEvent('keypress', { key: 'Enter' });
+            document.dispatchEvent(keyboardEvent);
+          }
+        </script>
+        <script src="https://kit.fontawesome.com/2d59bec3ec.js" crossorigin="anonymous"></script>
+        <script src="bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+        <title>Jack Ieong</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar pt-3 ps-5 pe-5" id="navbar">
+                <div class="container-fluid">
+                  <a class="navbar-brand signature" onclick="reload()" id="logo"></a>
+                  <button class="navbar-toggler" id='toggler' type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link nav-pill ps-4 pe-4" id="nav-item-0" href="#about">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link nav-pill ps-4 pe-4 inv-delay-1" id="nav-item-1" href="#experience">Experience</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link nav-pill ps-4 pe-4 inv-delay-1" id="nav-item-2" href="#project">Project</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link nav-pill ps-4 pe-4 inv-delay-1" id="nav-item-3" href="#contact">Contact</a>
+                      </li>
+                      <li class="nav-item d-flex align-items-center ms-2">
+                        <button type="button" class="btn btn-primary ps-4 pe-4 inv-delay-1" id="nav-item-4" href="#">Resume</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <div class="container col-10">
+        <!-- first section-->
+          <div class="vh-100 pt-5">
+            <div class="fs-4 text-primary pt-2 pb-2 fs-5 fade-in-down" id="first-0">
+              Hello, my name is
+            </div>
+            <div class="display-1 pt-2 pb-2 fade-in" id="first-1">
+              Jack Ieong,
+            </div>
+            <div class="display-5 pt-2 pb-2 fade-in" id="first-2">
+              a full-stack software engineer.
+            </div>
+            <div class="fs-4 pt-2 pb-2 fade-in" id="first-3">
+                I am passionate in designing and building applications that can benefit the human kind and
+                change the world. Currently, I am a rising senior in the major of computer science at
+              <a href="https://www.umass.edu">UMass Amherst</a>.
+            </div>
+          </div>
+        </div>
+        <!-- about -->
+        <div class="container">
+              <div class="pt-5" id="about">
+                <h2 class="box"><span class="text-primary fs-2 pt-2 pb-2">About Me</span></h2>
+                <div class="row pt-3 pb-3">
+                    <div class="col-lg-8 col-md-12 col-sm-12 fs-4 mb-4 mt-2 ps-4">
+                      Hello! My name is Jack and I love building applications that impact the human kind and leave a mark on the world!
+                      <br><br>
+                      My interest in web development was piqued back in 2018 when I came across <a href="https://www.shopify.com">Shopify</a>,
+                      which I used to design and launch eCommerence stores that sell products and services to customers across the globe.
+                      <br><br>
+                      That's the time when I began to go into depth of web development, and that taught me a lot about Javascript, HTML & CSS!
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-6 d-flex align-items-center justify-content-center mt-4" id="photo">
+                      <img src="assets/Jack-pfp.png" alt="jack-pfp" width="60%" id="pfp">
+                    </div>
+                  <div class="mt-5"></div>
+                      <div class="col-lg-4 mt-3">
+                        <div class="d-flex justify-content-center rotate360" id="language">
+                          <img src="assets/language.png" alt="language" width="50">
+                        </div>
+                        <div class="d-flex justify-content-center fs-4 mb-4">
+                        Languages
+                        </div>
+                        <div class="row mt-2 justify-content-center" id="language-item">
+                          <div class="item rounded-pill">HTML</div>
+                          <div class="item rounded-pill">CSS</div>
+                          <div class="item rounded-pill">Javascript</div>
+                          <div class="item rounded-pill">Python</div>
+                          <div class="item rounded-pill">Java</div>
+                          <div class="item rounded-pill">SQL</div>
+                          <div class="item rounded-pill">C</div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-3">
+                        <div class="d-flex justify-content-center rotate360" id="tech">
+                          <img src="assets/framework.png" alt="framework" width="50">
+                        </div>
+                        <div class="d-flex justify-content-center fs-4 mb-4">
+                        Technologies
+                        </div>
+                        <div class="row mt-2 justify-content-center" id="tech-item">
+                          <div class="item rounded-pill">Express</div>
+                          <div class="item rounded-pill">React.js</div>
+                          <div class="item rounded-pill">Bootstrap</div>
+                          <div class="item rounded-pill">MongoDB</div>
+                          <div class="item rounded-pill">NoSQL</div>
+                          <div class="item rounded-pill">Heroku</div>
+                          <div class="item rounded-pill">Netlify</div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-3">
+                        <div class="d-flex justify-content-center rotate360" id="tool">
+                          <img src="assets/tools.png" alt="tools" width="50">
+                        </div>
+                        <div class="d-flex justify-content-center fs-4 mb-4">
+                          Tools
+                        </div>
+                        <div class="row mt-2 justify-content-center" id="tool-item">
+                          <div class="item rounded-pill">Github</div>
+                          <div class="item rounded-pill">Postman</div>
+                          <div class="item rounded-pill">API Testing</div>
+                          <div class="item rounded-pill">Version Control</div>
+                          <div class="item rounded-pill">VS Code</div>
+                          <div class="item rounded-pill">Canva</div>
+                          <div class="item rounded-pill">Figma</div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+        <!-- experience -->
+        <div class="container mt-3">
+          <div class="pt-5" id="experience">
+            <h2 class="box"><span class="text-primary fs-2 pt-2 pb-2">Experience</span></h2>
+            <div class="row pt-3 pb-3 media-padding">
+              <div class="mb-4 ms-3">
+                <b>Software Engineer Intern <span class="text-primary">@ Labour Affairs Bureau</span></b>
+                <br>
+                <span class="font-secondary">May 2021 - August 2021</span>
+                <br>
+                <div class="flex-container">
+                  <div class="flex-arrow-right">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div class="flex-content">
+                    Conducted data cleaning in Python
+                    to eliminate corrupted and incorrect data from the LAB database to ensure data consistency and integrity.
+                  </div>
+                  <div class="flex-arrow-right">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div class="flex-content">
+                    Collaborated with the IT team and the infrastructure team to set up patch automation for all Linux servers in LAB.
+                  </div>
+                  <div class="flex-arrow-right">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div class="flex-content">
+                    Interviewed workers for data collection to measure and analyze working conditions and labor market activities.
+                  </div>
+                </div>
+                <br>
+                <b>Accounting Clerk <span class="text-primary">@ Daikin Airconditioning Ltd</span></b>
+                <br>
+                <span class="font-secondary">June 2020 - August 2020</span>
+                <div class="flex-container">
+                  <div class="flex-arrow-right">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div class="flex-content">
+                    Processed outgoing invoices and incoming payments for 300+ ongoing customer accounts. Achieved 95% performance to goals.
+                  </div>
+                  <div class="flex-arrow-right">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div class="flex-content">
+                    Answered 20+ incoming calls per shift, communicated with vendors, customers, and colleagues to resolve inquiries and issues.
+                  </div>
+                  <div class="flex-arrow-right">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div class="flex-content">
+                    Prepared bank deposits, general ledger postings and statements.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- project -->
+        <div class="container mt-3">
+          <div class="pt-5" id="project">
+            <h2 class="box"><span class="text-primary fs-2 pt-2 pb-2">Featured Projects</span></h2>
+            <div class="card-group gap-4 justify-content-center pt-3">
+              <div class="card bg-secondary">
+                <img class="card-img" src="assets/Vibe - Party Page.png" alt="party-page">
+                <div class="image-overlay">
+                    <a href="https://github.com/ieongch0106/vibe" target="_blank" rel="noopener noreferrer" alt="github" title="github"><i class="fa fa-github fa-2xl" id="vibe-icon1"></i></a>
+                </div>
+                <div class="card-body">  
+                  <span class="card-title">Vibe</span>
+                  <div class="card-caption">
+                    I worked with a few friends to create this application with the goal of enhancing experience of party hosts and guests.
+                    Guests can pick their favorite songs and add them to the queue where everyone votes for the next song.
+                    I gained more knowledge in using Express, REST APIs and NoSQL in this project.
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <h6>Node Express JS MongoDB <span class="spacing">REST API</span></h6>
+                </div>
+              </div>
+              <div class="card bg-secondary">
+                <img class="card-img" src="assets/Habita.png" alt="habita-app">
+                <div class="image-overlay">
+                  <a href="https://github.com/ieongch0106/Habita" target="_blank" rel="noopener noreferrer" alt="github" title="github"><i class="fa fa-github fa-2xl" id="habita-icon1"></i></a>
+                  <a href="https://habita-do.herokuapp.com" target="_blank" rel="noopener noreferrer" alt="app" title="app"><i class="fa fa-arrow-up-right-from-square fa-2xl" id="habita-icon2"></i></a>
+                </div>
+                <div class="card-body">
+                  <span class="card-title">Habita</span>
+                  <div class="card-caption">
+                    An application to store and keep track of tasks and habits securely and without a mess.
+                    I built it using JS, HTML, CSS for the frontend, Node.js for the backend, then deploy it on Heroku.
+                    I built this project to gain experience in building web applications.
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <h6>HTML CSS JS Heroku</h6>
+                </div>
+              </div>
+              <div class="card bg-secondary">
+                <img src="assets/website.png" alt="Jack-website">
+                <div class="card-body">
+                  <span class="card-title">Personalportfolio</span>
+                </div>
+                <div class="card-footer">
+                  <h6>HTML CSS JS Bootstrap</h6>
+                </div>
+              </div>
+            </div>
+            <div class="card-group gap-4 justify-content-center">
+              <div class="card bg-secondary">
+                <img class="card-img" src="assets/yumsnap.png" alt="Yumsnap-app">
+                <div class="image-overlay">
+                  <a href="https://github.com/ieongch0106/YumSnap" target="_blank" rel="noopener noreferrer" alt="github" title="github"><i class="fa fa-github fa-2xl" id="yumsnap-icon1"></i></a>
+                </div>
+                <div class="card-body">  
+                  <span class="card-title">YumSnap</span>
+                  <div class="card-caption">
+                    An web application that allows users to track their calories and macros intakes
+                    depending on users' age, sex, activity level, etc.
+                    By fetching Nutrition API to get data from food database
+                    in terms of calculating nutritional needs for each individual user.
+                    Perfect for someone who loves fitness or wants to change their body type. 
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <h6>JS Bootstrap Express <span class="spacing">Nutrition API</span></h6>
+                </div>
+              </div>
+              <div class="card bg-secondary invisible">
+                <!-- <img src="assets/Habita.png" alt="habita-app">
+                <div class="card-body">
+                  <span class="card-title">Habita</span>
+                </div>
+                <div class="card-footer">
+                  hi
+                </div> -->
+              </div>
+              <div class="card bg-secondary invisible">
+                <!-- <img src="assets/Habita.png" alt="habita-app">
+                <div class="card-body">
+                  <span class="card-title">Habita</span>
+                </div>
+                <div class="card-footer">
+                  hi
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- contact -->
+        <div class="container mt-3">
+          <div class="vh-100 pt-5" id="contact">
+            <h2 class="box mb-4"><span class="text-primary fs-2 pt-2 pb-2">Contact</span></h2>
+            <h1 class="mt-4 mb-4">Thank you for visiting!</h1>
+            <h3 class="mt-4 mb-4x">feel free to drop me a line or say hello!</h3>
+            <div class="contact-container mt-5">
+              <a href="https://github.com/ieongch0106" target="_blank" rel="noopener noreferrer" alt="github" title="github"><i class="fa fa-github fa-xl"></i></a>
+              <a href="https://instagram.com/jack__0106" target="_blank" rel="noopener noreferrer" alt="instagram" title="instagram"><i class="fa fa-instagram fa-xl"></i></a>
+              <a href="mailto:jieong.dev@gmail.com" alt="email" title="email"><i class="fa fa-envelope fa-xl"></i>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
