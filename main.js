@@ -1,6 +1,7 @@
 import { signature, logo } from '/assets/signature.js';
 
 const body = document.body.innerHTML; //save for later use
+let lastScrollY = window.scrollY;
 
 //default messages
 const messages = [
@@ -24,6 +25,24 @@ document.addEventListener('keypress', event => {
         display_signature();
     }
 });
+
+// navbar scroll event listener
+window.addEventListener('scroll', ()=> {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY === 0) {
+        navbar.style.backgroundColor = 'transparent';
+    } else {
+        if (lastScrollY < window.scrollY) {
+            navbar.classList.add("nav-hidden");
+        } else {
+            navbar.classList.remove("nav-hidden");
+            navbar.style.backgroundColor = 'rgba(15, 14, 14, 0.811)';
+            navbar.style['backdrop-filter'] = 'blur(8px)';
+        }
+    }
+    lastScrollY = window.scrollY;
+});
+
 
 // homepage scroll event listener
 document.addEventListener('scroll', function () {
@@ -59,7 +78,7 @@ function isInViewport(element) {
 
 //welcome page, display message
 function welcome() {
-    document.body.style.fontSize = "25px";
+    document.body.style.fontSize = "1.65rem";
     document.body.style.fontFamily = 'var(--bs-second-font-family)';
     document.body.innerHTML = '';
     display_message(messages, 0);
@@ -114,9 +133,9 @@ function display_button() {
     const button = document.createElement('button');
     const enter = document.createElement('p');
     text.style.color = 'white';
-    text.classList.add('fade-in');
+    text.classList.add('fade-in', 'first-style');
     button.classList.add('fade-in', 'mt-3', 'ps-3', 'pe-3');
-    enter.classList.add('fade-in');
+    enter.classList.add('fade-in', 'first-style');
     button.id = 'learn_more';
     text.innerHTML = "<br>Want to see what I've built?<br>";
     button.innerHTML = 'Sure bet!';
@@ -164,9 +183,11 @@ function return_homepage() {
     document.body.innerHTML = body;
     document.body.style.fontFamily = 'var(--bs-body-font-family)';
     document.body.style.fontSize = 'var(--bs-body-font-size)';
+    document.body.style.paddingTop = '100px';
     trigger_navi_animation('fade-in-b-r');
     const brand = document.getElementById('logo');
     brand.innerHTML = logo;
+    toggle_activate();
     brand.addEventListener('animationend', ()=> {
         brand.classList.remove('signature');
     })
@@ -222,4 +243,27 @@ function click_display(id) {
         item.style.display = 'flex';
         document.getElementById(id).style.filter = 'brightness(1)';
     }
+}
+
+
+function toggle_activate() {
+    const bsCollapse = new bootstrap.Collapse(document.getElementById('navbarSupportedContent'), {
+        toggle: false,
+        show: true,
+        hide: false
+    });
+    document.getElementById('navbarSupportedContent').addEventListener('show.bs.collapse', ()=>{
+        document.getElementById("navbar").style.backgroundColor = 'rgba(15, 14, 14, 0.811)';
+        document.getElementById("navbar").style['backdrop-filter'] = 'blur(8px)';
+        document.body.style.overflow = 'hidden';
+        for (const child of document.querySelectorAll('.navbar-nav')) {
+            child.addEventListener('click', ()=> {
+                document.body.style.overflow = 'visible';
+                bsCollapse.hide();
+            })
+        }
+    });
+    document.getElementById('navbarSupportedContent').addEventListener('hide.bs.collapse', ()=>{
+        document.body.style.overflow = 'visible';
+    });
 }

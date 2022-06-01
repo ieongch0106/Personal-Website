@@ -1,6 +1,6 @@
 const signature = 
 `
-<div class='outer' id='cover_page'>
+<div class='outer'>
 <div class='middle'>
 <div class='inner'>
 <svg stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 1000 720" width="375px" height="270px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">

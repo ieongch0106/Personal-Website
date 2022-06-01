@@ -9,6 +9,10 @@
     --bs-body-color: #faf8f895;
 }
 
+button:active, i:active {
+    transform: scale(0.9);
+}
+
 h2 {
     display: flex;
     flex-direction: row;
@@ -78,6 +82,10 @@ a:hover {
     color: #ffffffe7;
     background-color: #6863635d;
     border-color: var(--bs-primary);
+}
+
+#navbar {
+    transition: all 1.5s;
 }
 
 .navbar-nav > li {
@@ -284,11 +292,16 @@ a:hover {
     animation: 2s fadeInDown;
 }
 
+.nav-hidden {
+    /* background-color: transparent; */
+    transform: translateY(-110px);
+}
+
 /* position */
 
 .outer {
     display: table;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -356,6 +369,7 @@ a:hover {
     justify-content: center;
     background-color: white;
     color: rgb(0, 0, 0);
+    text-align: center;
     font-size: 20px;
     border: 2px solid black;
     margin: 2px;
@@ -435,18 +449,81 @@ a:hover {
 }
 
 @media (max-width: 575.98px) {
+    html {
+        font-size: 0.75rem;
+    }
+
+    body {
+        padding-top: 65px !important;
+    }
+
+    svg {
+        transform: scale(0.75);
+    }
+
+    .d-inline-block {
+        font-size: 10px;
+    }
+    
+    .first-style {
+        font-size: 10px;
+    }
+    
+    #learn_more {
+        padding: 0.1rem 0.5rem !important;
+        font-size: 0.875rem;
+    }
+    
+    .outer {
+        width: 80%;
+        height: 80%;
+    }
+
+    #logo {
+        margin-top: -5px;
+    }
+    
+    .navbar {
+        padding: 0;
+        margin-left: -30px;
+        margin-right: -20px;
+    }
+
+    .navbar-nav {
+        gap: 9px;
+    }
+
+    .navbar-collapse {
+        margin-left: -15px;
+        padding-bottom: 20px;
+    }
+
+    #nav-item-4 {
+        margin-left: 15px;
+    }
+    
+    #about-text {
+        margin: 5px;
+        padding-right: 25px;
+    }
+
     .flex-arrow-right {
         padding: 5px;
         width: 10%;
     }
 
     .flex-content {
+        font-size: smaller;
         padding: 5px;
         width: 90%;
     }
 
     .media-padding {
-        padding-right: 10px;
+        padding-right: 15px;
+    }
+
+    .card-group {
+        padding: 20px;
     }
 
     .contact-container {
@@ -457,17 +534,93 @@ a:hover {
     .image-overlay {
         height: 30%;
     }
+    
 }
 
 @media (min-width: 768px) {
+    .navbar {
+        margin-left: -5px;
+        margin-right: -10px;
+    }
+
+    .navbar-collapse {
+        padding: 15px;
+        margin-left: -50px;
+    }
+
+    .navbar-nav {
+        gap: 12px;
+    }
+
+    #nav-item-4 {
+        margin-left: 15px;
+    }
+
+    #pfp {
+        width: 40%;
+    }
+
+    .item {
+        max-width: 25%;
+    }
+
+    .card-group {
+        align-items: center;
+        padding: 2.5rem;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .card-caption {
+        font-size: 1.2rem;
+    }
+
     .image-overlay {
-        height: 15%;
+        height: 50%;
+        gap: 3rem;
     }
 }
 
 @media (min-width: 992px) {
+    .navbar {
+        margin: 0;
+    }
+
+    .navbar-nav {
+        gap: 0;
+    }
+
+    #nav-item-4 {
+        margin: 0;
+    }
+
+    #pfp {
+        width: 60%;
+    }
+
+    .item {
+        max-width: 60%;
+    }
+
+    .card-group {
+        align-items: flex-start;
+        padding: 0;
+        flex-direction: row;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-caption {
+        font-size: smaller;
+    }
+
     .image-overlay {
-        height: 30%;
+        height: 45%;
     }
 }
 
@@ -604,7 +757,6 @@ a:hover {
         transform: none;
     }
 }
-
 
 @keyframes fadeInBottomRight {
     0% {
