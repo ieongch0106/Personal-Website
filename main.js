@@ -200,6 +200,7 @@ function return_homepage() {
     document.getElementById('language').addEventListener('click', ()=> click_display('language'));
     document.getElementById('tech').addEventListener('click', ()=> click_display('tech'));
     document.getElementById('tool').addEventListener('click', ()=> click_display('tool'));
+    shake_icons();
 }
 
 //trigger navi animation for trigger_static_animation function
@@ -271,4 +272,14 @@ function toggle_activate() {
     // document.getElementById('navbarSupportedContent').addEventListener('hide.bs.collapse', ()=>{
     //     document.body.style.overflowY = 'visible';
     // });
+}
+
+function shake_icons() {
+    for (const card of document.querySelectorAll('.card')) {
+        card.addEventListener('click', ()=> {
+            for (const icon of card.querySelectorAll('i')) {
+                icon.classList.toggle('i-shake');
+            }
+        }, {passive: true});
+    }
 }
