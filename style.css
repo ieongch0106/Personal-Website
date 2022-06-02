@@ -457,10 +457,6 @@ a:hover {
         padding-top: 65px !important;
     }
 
-    html, body {
-        overflow-x: hidden; 
-    }
-
     svg {
         transform: scale(0.75);
     }
@@ -494,6 +490,11 @@ a:hover {
 
     #toggler {
         margin-right: -20px;
+        border: none;
+    }
+
+    #toggler:focus, #toggler:active {
+        box-shadow: none;
     }
 
     .navbar-nav {
