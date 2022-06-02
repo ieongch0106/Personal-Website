@@ -457,6 +457,10 @@ a:hover {
         padding-top: 65px !important;
     }
 
+    html, body {
+        overflow-x: hidden;
+    }
+
     svg {
         transform: scale(0.75);
     }
@@ -546,6 +550,10 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    
     .navbar {
         margin-left: -5px;
         margin-right: -10px;
