@@ -256,15 +256,19 @@ function toggle_activate() {
         document.getElementById("navbar").style.backgroundColor = 'rgba(15, 14, 14, 0.811)';
         document.getElementById("navbar").style['-webkit-backdrop-filter'] = 'blur(8px)';
         document.getElementById("navbar").style['backdrop-filter'] = 'blur(8px)';
-        document.body.style.overflowY = 'hidden';
+        window.addEventListener('scroll', ()=> {
+            bsCollapse.hide();
+        }, {passive: true});
+        window.addEventListener('click', ()=> {
+            bsCollapse.hide();
+        }, {passive: true});
         for (const child of document.querySelectorAll('.navbar-nav')) {
             child.addEventListener('click', ()=> {
-                document.body.style.overflowY = 'visible';
                 bsCollapse.hide();
-            })
+            }, {passive: true})
         }
     });
-    document.getElementById('navbarSupportedContent').addEventListener('hide.bs.collapse', ()=>{
-        document.body.style.overflowY = 'visible';
-    });
+    // document.getElementById('navbarSupportedContent').addEventListener('hide.bs.collapse', ()=>{
+    //     document.body.style.overflowY = 'visible';
+    // });
 }
