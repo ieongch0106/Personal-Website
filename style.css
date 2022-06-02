@@ -458,6 +458,7 @@ a:hover {
     }
 
     html, body {
+        max-width: 100%;
         overflow-x: hidden;
     }
 
@@ -551,6 +552,7 @@ a:hover {
 
 @media (min-width: 768px) {
     html, body {
+        max-width: 100%;
         overflow-x: hidden;
     }
     
