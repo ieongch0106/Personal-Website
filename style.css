@@ -491,6 +491,7 @@ a:hover {
         padding: 0;
         margin-left: -30px;
         margin-right: -20px;
+        overflow-x: hidden;
     }
 
     .navbar-nav {
