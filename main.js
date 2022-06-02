@@ -31,12 +31,14 @@ window.addEventListener('scroll', ()=> {
     const navbar = document.getElementById("navbar");
     if (window.scrollY === 0) {
         navbar.style.backgroundColor = 'transparent';
+        navbar.style.boxShadow = 'none';
     } else {
         if (lastScrollY < window.scrollY) {
             navbar.classList.add("nav-hidden");
         } else {
             navbar.classList.remove("nav-hidden");
             navbar.style.backgroundColor = 'rgba(15, 14, 14, 0.811)';
+            navbar.style.boxShadow = 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px';
             navbar.style['backdrop-filter'] = 'blur(8px)';
         }
     }
@@ -197,6 +199,7 @@ function return_homepage() {
     brand.addEventListener('mouseleave', ()=> {
         brand.classList.remove('signature');
     });
+    document.getElementById("navbar").style.boxShadow = 'none';
     document.getElementById('language').addEventListener('click', ()=> click_display('language'));
     document.getElementById('tech').addEventListener('click', ()=> click_display('tech'));
     document.getElementById('tool').addEventListener('click', ()=> click_display('tool'));

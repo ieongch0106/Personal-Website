@@ -85,13 +85,13 @@ a:hover {
 }
 
 #navbar {
-    transition: all 1.5s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.5s;
 }
 
 .navbar-nav > li {
     font-size: 18px;
     font-family: var(--bs-second-font-family);
-    padding-left: 3px;
 }
 
 .nav-link {
@@ -130,6 +130,10 @@ a:hover {
 
 .font-secondary {
     font-family: var(--bs-second-font-family);
+}
+
+.text-white {
+    color: rgb(215, 215, 215) !important;
 }
 
 .card-group {
@@ -561,8 +565,13 @@ a:hover {
         overflow-x: hidden;
     }
     
+    #logo {
+        margin-top: -5px;
+    }
+
     .navbar {
         padding: 0;
+        padding-bottom: 4px;
         margin-left: -5px;
         margin-right: -10px;
     }
@@ -610,13 +619,9 @@ a:hover {
 }
 
 @media (min-width: 992px) {
-    #logo {
-        margin-top: -5px;
-    }
-
     .navbar {
         padding-bottom: 8px;
-        margin: 0;
+        margin-right: -25px;
     }
 
     .navbar-nav {
