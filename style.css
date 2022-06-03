@@ -87,6 +87,8 @@ a:hover {
 #navbar {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     transition: all 0.5s;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .navbar-nav > li {
@@ -356,11 +358,20 @@ a:hover {
 #first-1 {
     color: #faf8f8e8;
     font-weight: bold;
+    animation-duration: 2.5s;
+    -webkit-animation-duration: 2.5s;
 }
 
 #first-2 {
     color: #faf8f8b4;
     font-weight: bold;
+    animation-duration: 3.25s;
+    -webkit-animation-duration: 3.25s;
+}
+
+#first-3 {
+    animation-duration: 4s;
+    -webkit-animation-duration: 4s;
 }
 
 #about {
