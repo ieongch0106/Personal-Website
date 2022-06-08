@@ -335,6 +335,11 @@ a:hover {
     cursor: pointer;
 }
 
+.box {
+    animation-duration: 4s;
+    -webkit-animation-duration: 4s;
+}
+
 .inv-delay-1 {
     visibility: hidden;
     animation-delay: 75ms;
