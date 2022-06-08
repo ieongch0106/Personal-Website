@@ -132,6 +132,7 @@ a:hover {
 
 .font-secondary {
     font-family: var(--bs-second-font-family);
+    color: #faf8f8b5;
 }
 
 .text-white {
