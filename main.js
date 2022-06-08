@@ -258,8 +258,6 @@ function toggle_activate() {
     });
     document.getElementById('navbarSupportedContent').addEventListener('show.bs.collapse', ()=>{
         document.getElementById("navbar").style.backgroundColor = 'rgba(15, 14, 14, 0.811)';
-        // document.getElementById("navbar").style['-webkit-backdrop-filter'] = 'blur(8px)';
-        // document.getElementById("navbar").style['backdrop-filter'] = 'blur(8px)';
         window.addEventListener('scroll', ()=> {
             bsCollapse.hide();
         }, {passive: true});
@@ -272,9 +270,6 @@ function toggle_activate() {
             }, {passive: true})
         }
     });
-    // document.getElementById('navbarSupportedContent').addEventListener('hide.bs.collapse', ()=>{
-    //     document.body.style.overflowY = 'visible';
-    // });
 }
 
 function shake_icons() {
