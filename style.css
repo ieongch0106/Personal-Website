@@ -185,8 +185,20 @@ a:hover {
     gap: 70px;
 }
 
-#vibe-icon1, #habita-icon1, #habita-icon2, #yumsnap-icon1 {
+#utrade-icon1, #newsly-icon1, #newsly-icon2, #blogspot-icon1, #vibe-icon1, #habita-icon1, #habita-icon2, #yumsnap-icon1 {
     color: black;
+}
+
+#utrade-icon1:hover {
+    color: maroon;
+}
+
+#newsly-icon1:hover, #newsly-icon2:hover {
+    color: rgb(143, 205, 246);
+}
+
+#blogspot-icon1:hover {
+    color: rgb(32, 142, 215);
 }
 
 #vibe-icon1:hover {
