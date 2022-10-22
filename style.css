@@ -397,7 +397,7 @@ a:hover {
 }
 
 #pfp {
-    filter: brightness(0.25);
+    filter: brightness(0.5);
 }
 
 #pfp:hover, #pfp:focus, #pfp:active {
@@ -426,12 +426,12 @@ a:hover {
 }
 
 .rotate360 {
-    filter: brightness(0.2);
+    filter: brightness(0.4);
     transition: transform .7s ease-in-out;
 }
 
 .rotate360:hover, .rotate360:focus, .rotate360:active {
-    filter: brightness(0.3);
+    filter: brightness(0.8);
     cursor: pointer;
     -webkit-transform:rotate(360deg);
     -moz-transform: rotate(360deg);
