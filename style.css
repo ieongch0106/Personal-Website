@@ -524,6 +524,10 @@ a:hover {
         height: 80%;
     }
 
+    #pfp {
+        width: 65%;
+    }
+
     #logo {
         margin-top: -5px;
     }
@@ -664,7 +668,7 @@ a:hover {
     }
 
     #pfp {
-        width: 60%;
+        width: 85%;
     }
 
     .item {
